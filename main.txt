@@ -1,0 +1,42 @@
+/*
+ * TemplateMacros.c
+ *
+ * Created: 9/13/2017 5:57:21 AM
+ * Author : Administrator
+ */ 
+
+#include <avr/io.h>
+
+//bit operation macros - these make code more readable
+#define bit_get(p,m) ((p) & (m))
+#define bit_set(p,m) ((p) |= (m))
+#define bit_clear(p,m) ((p) &= ~(m))
+#define bit_flip(p,m) ((p) ^= (m))
+#define bit_write(c,p,m) (c ? bit_set(p,m) : bit_clear(p,m))
+#define BIT(x) (0x01 << (x))
+#define LONGBIT(x) ((unsigned long)0x00000001 << (x))
+
+/*
+bit_set(PORTB, BIT(5));
+bit_get(PORTB, BIT(5));
+bit_clear(PORTB, BIT(5));
+bit_flip(PORTB, BIT(5));
+Use of bit_write - it's a conditional true/false test:
+	int test = 1; //or int test = 0;
+	bit_write(test, PORTB, BIT(5));
+*/
+
+
+
+
+
+int main(void)
+{
+    /* Replace with your application code */
+
+    while (1) 
+    {
+		
+    }
+}
+
